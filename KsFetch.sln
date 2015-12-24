@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KsFetch", "KsFetch\KsFetch.csproj", "{88B8566B-FE4E-44B5-81A8-ECD5B6BC24A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KsFetch.GUI", "KsFetch.GUI\KsFetch.GUI.csproj", "{29D72577-5B4E-430A-911C-B92012254E99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "res", "res", "{E990FD77-5B3F-4C86-86F9-E4E592D4F671}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88B8566B-FE4E-44B5-81A8-ECD5B6BC24A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B8566B-FE4E-44B5-81A8-ECD5B6BC24A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B8566B-FE4E-44B5-81A8-ECD5B6BC24A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B8566B-FE4E-44B5-81A8-ECD5B6BC24A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D72577-5B4E-430A-911C-B92012254E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D72577-5B4E-430A-911C-B92012254E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D72577-5B4E-430A-911C-B92012254E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D72577-5B4E-430A-911C-B92012254E99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88B8566B-FE4E-44B5-81A8-ECD5B6BC24A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KsFetch</RootNamespace>
+    <AssemblyName>KsFetch</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssociatedTextAttribute.cs" />
+    <Compile Include="CategoryKind.cs" />
+    <Compile Include="ChineseDescription.cs" />
+    <Compile Include="Contracts\V1\Project.cs" />
+    <Compile Include="Contracts\V1\Reward.cs" />
+    <Compile Include="Contracts\V1\RewardUrlApi.cs" />
+    <Compile Include="Contracts\V1\RewardUrls.cs" />
+    <Compile Include="Contracts\V1\SearchResponse.cs" />
+    <Compile Include="Contracts\V1\Category.cs" />
+    <Compile Include="Contracts\V1\CategoryUrls.cs" />
+    <Compile Include="Contracts\V1\CategoryUrlWeb.cs" />
+    <Compile Include="Contracts\V1\Creator.cs" />
+    <Compile Include="Contracts\V1\CreatorAvatar.cs" />
+    <Compile Include="Contracts\V1\CreatorUrls.cs" />
+    <Compile Include="Contracts\V1\CreatorUrlApi.cs" />
+    <Compile Include="Contracts\V1\CreatorUrlWeb.cs" />
+    <Compile Include="Contracts\V1\Location.cs" />
+    <Compile Include="Contracts\V1\LocationUrlApi.cs" />
+    <Compile Include="Contracts\V1\LocationUrls.cs" />
+    <Compile Include="Contracts\V1\LocationUrlWeb.cs" />
+    <Compile Include="Contracts\V1\Photo.cs" />
+    <Compile Include="Contracts\V1\Profile.cs" />
+    <Compile Include="Contracts\V1\ProfileFeatureImageAttributes.cs" />
+    <Compile Include="Contracts\V1\ProfileFeatureImageAttributesImageUrls.cs" />
+    <Compile Include="Contracts\V1\ProjectAbstract.cs" />
+    <Compile Include="Contracts\V1\ProjectUrls.cs" />
+    <Compile Include="Contracts\V1\ProjectUrlWeb.cs" />
+    <Compile Include="Contracts\V1\TokenResponse.cs" />
+    <Compile Include="Contracts\V1\Video.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="KsFetchWebClient.cs" />
+    <Compile Include="LogInInfo.cs" />
+    <Compile Include="KickstarterApiException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serializers.cs" />
+    <Compile Include="SortMethod.cs" />
+    <Compile Include="SubCategoryKind.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SampleHtmlError.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
